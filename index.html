@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudySpace — a student study dashboard by Shivam Srivastava, Class AN, Section A.">
+  <title>StudySpace | Shivam Srivastava</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="StudySpace home"><span class="brand-icon">✦</span> StudySpace</a>
+    <nav>
+      <a href="#subjects">Subjects</a>
+      <a href="#planner">Planner</a>
+      <a href="#focus">Focus Timer</a>
+    </nav>
+    <a class="profile-pill" href="#about"><span class="avatar">SS</span><span>Shivam</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL STUDY DASHBOARD</div>
+        <h1>Small steps.<br><span>Big achievements.</span></h1>
+        <p>Build better study habits, stay organised, and make every study session count.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#planner">Plan my day <span>↗</span></a>
+          <a class="button button-quiet" href="#subjects">Explore subjects</a>
+        </div>
+        <div class="hero-note"><span>✧</span> Consistency is more powerful than perfection.</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of books and a study desk">
+        <div class="sun"></div><div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+        <div class="book book-back"></div><div class="book book-mid"></div>
+        <div class="book book-front"><span>FOCUS</span><small>LEARN • GROW</small></div>
+        <div class="plant"><i></i><i></i><i></i><b></b></div>
+        <div class="pencil"></div>
+        <div class="art-label"><strong>01</strong><span>One page at a time</span></div>
+      </div>
+    </section>
+
+    <section class="welcome-row" id="about">
+      <div>
+        <p class="section-kicker">WELCOME BACK</p>
+        <h2>Hi, Shivam <span class="wave">✋</span></h2>
+        <p class="muted">Your next chapter starts with what you do today.</p>
+      </div>
+      <div class="student-card">
+        <div class="student-icon">🎓</div>
+        <div><strong>Shivam Srivastava</strong><span>Class AN · Section A</span></div>
+        <span class="student-tag">STUDENT</span>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Study overview">
+      <article class="stat-card">
+        <div class="stat-icon lilac">▤</div><p>Study subjects</p><strong>04</strong><small>Keep learning every day</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon mint">✓</div><p>Daily tasks</p><strong id="task-count">00</strong><small>Tasks completed today</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon peach">◷</div><p>Focus sessions</p><strong id="session-count">00</strong><small>One focused session at a time</small>
+      </article>
+      <article class="stat-card quote-card">
+        <div class="quote-mark">“</div><p>Today's reminder</p><strong class="quote-text">Progress over perfection.</strong><small>You've got this.</small>
+      </article>
+    </section>
+
+    <section class="content-section" id="subjects">
+      <div class="section-heading"><div><p class="section-kicker">YOUR LEARNING SPACE</p><h2>Choose a subject</h2></div><span class="heading-note">Four areas to explore ↘</span></div>
+      <div class="subject-grid">
+        <article class="subject-card subject-blue"><div class="subject-top"><span class="subject-symbol">∑</span><span class="subject-number">01</span></div><h3>Mathematics</h3><p>Practice problems and strengthen your concepts.</p><a href="#planner">Plan practice <span>→</span></a><div class="subject-decoration">＋</div></article>
+        <article class="subject-card subject-pink"><div class="subject-top"><span class="subject-symbol">⚛</span><span class="subject-number">02</span></div><h3>Science</h3><p>Explore ideas, experiments, and discoveries.</p><a href="#planner">Plan revision <span>→</span></a><div class="subject-decoration">◌</div></article>
+        <article class="subject-card subject-yellow"><div class="subject-top"><span class="subject-symbol">Aa</span><span class="subject-number">03</span></div><h3>English</h3><p>Improve reading, writing, and vocabulary.</p><a href="#planner">Plan reading <span>→</span></a><div class="subject-decoration">✳</div></article>
+        <article class="subject-card subject-green"><div class="subject-top"><span class="subject-symbol">⌘</span><span class="subject-number">04</span></div><h3>Computer</h3><p>Learn digital skills and explore coding.</p><a href="#planner">Plan learning <span>→</span></a><div class="subject-decoration">{ }</div></article>
+      </div>
+    </section>
+
+    <section class="lower-grid">
+      <article class="panel planner-panel" id="planner">
+        <div class="panel-heading"><div><p class="section-kicker">STAY ON TRACK</p><h2>Today's study planner</h2></div><span class="panel-icon">☷</span></div>
+        <p class="muted panel-description">Add a task, then tick it off when you're done.</p>
+        <form id="task-form" class="task-form">
+          <input id="task-input" type="text" placeholder="e.g. Revise algebra notes" maxlength="90" aria-label="New study task" required>
+          <button type="submit" aria-label="Add task">＋</button>
+        </form>
+        <ul id="task-list" class="task-list">
+          <li class="empty-state">Your task list is ready. Add your first task above ✨</li>
+        </ul>
+        <div class="planner-footer"><span><span class="live-dot"></span> Your plan, your pace</span><button id="clear-completed" class="text-button" type="button">Clear completed</button></div>
+      </article>
+
+      <article class="panel focus-panel" id="focus">
+        <div class="panel-heading"><div><p class="section-kicker">DEEP WORK MODE</p><h2>Focus timer</h2></div><span class="panel-icon">◷</span></div>
+        <p class="muted panel-description">Try a short focus session. Keep distractions away.</p>
+        <div class="timer-wrap">
+          <div class="timer-ring"><div class="timer-inner"><span id="timer-display">25:00</span><small id="timer-status">READY TO FOCUS</small></div></div>
+        </div>
+        <div class="timer-presets"><button class="preset active" data-minutes="25" type="button">25 min</button><button class="preset" data-minutes="15" type="button">15 min</button><button class="preset" data-minutes="5" type="button">5 min break</button></div>
+        <div class="timer-controls"><button id="timer-start" class="button button-primary" type="button">▶ Start focus</button><button id="timer-reset" class="button button-quiet" type="button">↺ Reset</button></div>
+        <p class="timer-tip">Tip: Put your phone away and focus on one task.</p>
+      </article>
+    </section>
+
+    <section class="bottom-banner">
+      <div class="banner-star">✦</div><div><p class="section-kicker">A NOTE TO YOUR FUTURE SELF</p><h2>Every expert was once a beginner.</h2><p>Show up today. Your future self will thank you.</p></div><a href="#home" class="banner-arrow" aria-label="Back to top">↑</a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-icon">✦</span> StudySpace</a><p>Designed for learning, built for progress.</p><span>© <span id="year"></span> Shivam Srivastava · Class AN · Section A</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
